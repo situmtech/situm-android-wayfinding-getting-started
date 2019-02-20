@@ -159,7 +159,7 @@ Add the API key to your `AndroidManifest.xml`:
 
 We have created some samples that show different use cases of this module
 
-## SitumMapView
+### SitumMapView
 
 The simplest way to use our module is by creating an empty activity and including `SitumMapView` in the layout file.
 
@@ -167,16 +167,16 @@ Make sure to extend [FragmentActivity](https://developer.android.com/reference/a
 
 For more information, please refer to `ActivitySampleSimpleMap.java`.
 
-## Install listeners using SitumMap
+### Install listeners using SitumMap
 
 If you want to get notified about what happens inside the module, your activity should implement the `SitumMapView.OnMapReadyCallback` interface:
 
 For more information, please refer to `ActivitySampleLogEvents.java`
 
-## Load the map using SitumMapsLibrary
+### Load the map using SitumMapsLibrary
 Under some circumstances you may prefer to control the exact moment at which the underlying maps fragment is loaded. If that is your case, just use the `SitumMapsLibrary` object as described in `ActivitySampleUsingLibrary.java`.
 
-## Delegate onBackPressed events
+### Delegate onBackPressed events
 The Situm Map implements some convenience actions for `onBackPressed` Android events:
 
 * When there is an active building selected: zoom out to see building markers again.
