@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">Sample Situm Maps Library</string>
+    <string name="title_activity_main">Situm Maps Samples</string>
+
+    <!-- Samples: -->
+    <string name="situm_sample_title_simple_map">Simple map</string>
+    <string name="situm_sample_title_log_events">Log events</string>
+    <string name="situm_sample_title_delegate_back_events">Delegate back events</string>
+    <string name="situm_sample_title_library">Using SitumMapsLibrary</string>
+</resources>
