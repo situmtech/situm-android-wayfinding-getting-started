@@ -1,13 +1,17 @@
 package es.situm.wayfinding.sample.samples;
 
 import android.os.Bundle;
-import android.support.v4.app.FragmentActivity;
+import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
 
 import com.google.android.gms.maps.model.LatLng;
 
 import java.util.List;
 
+import es.situm.sdk.model.cartography.Building;
+import es.situm.sdk.model.cartography.Floor;
+import es.situm.sdk.model.cartography.Poi;
+import es.situm.sdk.model.location.Location;
 import es.situm.wayfinding.LibrarySettings;
 import es.situm.wayfinding.OnActiveBuildingListener;
 import es.situm.wayfinding.OnFloorChangeListener;
@@ -18,12 +22,8 @@ import es.situm.wayfinding.OnUserInteractionListener;
 import es.situm.wayfinding.SitumMapsLibrary;
 import es.situm.wayfinding.SitumMapsListener;
 import es.situm.wayfinding.sample.R;
-import es.situm.sdk.model.cartography.Building;
-import es.situm.sdk.model.cartography.Floor;
-import es.situm.sdk.model.cartography.Poi;
-import es.situm.sdk.model.location.Location;
 
-public class ActivitySampleUsingLibrary extends FragmentActivity implements SitumMapsListener,
+public class ActivitySampleUsingLibrary extends AppCompatActivity implements SitumMapsListener,
         OnUserInteractionListener, OnActiveBuildingListener, OnLoadBuildingsListener,
         OnFloorChangeListener, OnPoiSelectedListener, OnLocationChangeListener {
 

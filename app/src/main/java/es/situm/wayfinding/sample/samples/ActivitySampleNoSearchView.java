@@ -5,11 +5,11 @@ import android.support.v7.app.AppCompatActivity;
 
 import es.situm.wayfinding.sample.R;
 
-public class ActivitySampleSimpleMap extends AppCompatActivity {
+public class ActivitySampleNoSearchView extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_sample_situm_maps);
+        setContentView(R.layout.activity_sample_no_search_view);
     }
 }

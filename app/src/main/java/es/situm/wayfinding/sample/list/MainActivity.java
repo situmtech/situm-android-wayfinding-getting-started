@@ -8,6 +8,7 @@ import android.support.v7.widget.Toolbar;
 
 import es.situm.wayfinding.sample.R;
 import es.situm.wayfinding.sample.samples.ActivitySampleDelegateBackEvents;
+import es.situm.wayfinding.sample.samples.ActivitySampleNoSearchView;
 import es.situm.wayfinding.sample.samples.ActivitySampleUsingLibrary;
 import es.situm.wayfinding.sample.samples.ActivitySampleLogEvents;
 import es.situm.wayfinding.sample.samples.ActivitySampleSimpleMap;
@@ -32,6 +33,7 @@ public class MainActivity extends AppCompatActivity implements ViewHolderHelper.
         mSamplesList.addItem(R.string.situm_sample_title_log_events, ActivitySampleLogEvents.class);
         mSamplesList.addItem(R.string.situm_sample_title_delegate_back_events, ActivitySampleDelegateBackEvents.class);
         mSamplesList.addItem(R.string.situm_sample_title_library, ActivitySampleUsingLibrary.class);
+        mSamplesList.addItem(R.string.situm_sample_title_no_search_view, ActivitySampleNoSearchView.class);
     }
 
 

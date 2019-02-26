@@ -7,4 +7,5 @@
     <string name="situm_sample_title_log_events">Log events</string>
     <string name="situm_sample_title_delegate_back_events">Delegate back events</string>
     <string name="situm_sample_title_library">Using SitumMapsLibrary</string>
+    <string name="situm_sample_title_no_search_view">Remove Search View</string>
 </resources>

@@ -48,6 +48,9 @@
         <activity
             android:name=".samples.ActivitySampleUsingLibrary"
             android:screenOrientation="portrait" />
+        <activity
+            android:name=".samples.ActivitySampleNoSearchView"
+            android:screenOrientation="portrait" />
     </application>
 
 </manifest>
