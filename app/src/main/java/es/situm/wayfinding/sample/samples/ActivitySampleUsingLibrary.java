@@ -44,6 +44,7 @@ public class ActivitySampleUsingLibrary extends AppCompatActivity implements Sit
         setContentView(R.layout.activity_sample_using_library);
         String user = getString(R.string.situm_credentials_api_user);
         String apiKey = getString(R.string.situm_credentials_api_key);
+        librarySettings = new LibrarySettings();
         librarySettings.setApiKey(user, apiKey);
         // Create library:
         mLibrary = new SitumMapsLibrary(R.id.maps_library_target, this, librarySettings);
@@ -65,10 +66,12 @@ public class ActivitySampleUsingLibrary extends AppCompatActivity implements Sit
     // ISitumMapsListener
     // =============================================================================================
 
+
     @Override
     public void onSuccess() {
         Log.d(TAG, "ISitumMapsListener#onSuccess");
     }
+
 
     @Override
     public void onWarning(int code) {
