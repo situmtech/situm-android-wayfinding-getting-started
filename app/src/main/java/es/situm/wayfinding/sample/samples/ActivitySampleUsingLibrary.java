@@ -63,24 +63,17 @@ public class ActivitySampleUsingLibrary extends AppCompatActivity implements Sit
     }
 
     // =============================================================================================
-    // ISitumMapsListener
+    // SitumMapsListener
     // =============================================================================================
-
 
     @Override
     public void onSuccess() {
-        Log.d(TAG, "ISitumMapsListener#onSuccess");
-    }
-
-
-    @Override
-    public void onWarning(int code) {
-        Log.w(TAG, "ISitumMapsListener#onWarning, warning code is " + code);
+        Log.d(TAG, "SitumMapsListener#onSuccess");
     }
 
     @Override
     public void onError(int code) {
-        Log.e(TAG, "ISitumMapsListener#onError, error code is " + code);
+        Log.e(TAG, "SitumMapsListener#onError, error code is " + code);
     }
 
     // =============================================================================================
