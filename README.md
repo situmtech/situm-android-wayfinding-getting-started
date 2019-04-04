@@ -75,7 +75,7 @@ allprojects {
 * Now add the Situm Wayfinding Module dependency into the *dependencies* section of the **app** *build.gradle*.
 
 ```groovy
-    implementation ('es.situm:situm-wayfinding:0.1.0-alpha@aar') {
+    implementation ('es.situm:situm-wayfinding:0.2.0-alpha@aar') {
         transitive = true
     }
 ```
@@ -154,6 +154,19 @@ Add the API key to your `AndroidManifest.xml`:
   android:name="org.apache.http.legacy"
   android:required="false"/>
 ```
+
+* By default, the wayfinding library will include a `ToolBar` with the situm search feature.
+    * Tell your activity or app theme that you already use one by adding these lines to your styles.xml:
+    ```xml
+    <item name="windowActionBar">false</item>
+    <item name="windowNoTitle">true</item>
+    ```
+    * Or remove the Situm search toolbar setting to `false` the `situm_has_search_view` property of your `SitumMapView`:
+    ```xml
+    <es.situm.wayfinding.SitumMapView
+        ...
+        app:situm_has_search_view="false" />
+	```
 
 ## Samples
 
