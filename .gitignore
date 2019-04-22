@@ -10,3 +10,5 @@
 .externalNativeBuild
 .idea/
 local.gradle
+/app/src/debug
+/situm-wayfindingsitum-*/
