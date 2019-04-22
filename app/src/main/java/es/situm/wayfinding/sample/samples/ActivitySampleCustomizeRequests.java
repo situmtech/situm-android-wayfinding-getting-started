@@ -8,9 +8,9 @@ import es.situm.wayfinding.SitumMap;
 import es.situm.wayfinding.SitumMapView;
 import es.situm.wayfinding.sample.R;
 
-public class ActivitySampleCustomizeLocationRequests extends AppCompatActivity implements SitumMapView.OnMapReadyCallback {
+public class ActivitySampleCustomizeRequests extends AppCompatActivity implements SitumMapView.OnMapReadyCallback {
 
-    private static final String TAG = ActivitySampleCustomizeLocationRequests.class.getSimpleName();
+    private static final String TAG = ActivitySampleCustomizeRequests.class.getSimpleName();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

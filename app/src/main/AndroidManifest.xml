@@ -55,7 +55,7 @@
             android:name=".samples.ActivitySampleDashboardTheme"
             android:screenOrientation="portrait" />
         <activity
-            android:name=".samples.ActivitySampleCustomizeLocationRequests"
+            android:name=".samples.ActivitySampleCustomizeRequests"
             android:screenOrientation="portrait" />
     </application>
 
