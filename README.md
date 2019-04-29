@@ -112,7 +112,7 @@ android {
 Please remember that if your `minSdkVersion` is set to 20 or lower, you must use the multidex support library as follows:
 ```groovy
 dependencies {
-  compile 'com.android.support:multidex:1.0.3'
+  implementation 'com.android.support:multidex:1.0.3'
 }
 ```
 
