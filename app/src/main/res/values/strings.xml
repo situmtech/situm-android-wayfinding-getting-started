@@ -1,6 +1,7 @@
 <resources>
     <string name="app_name">Sample Situm Maps Library</string>
     <string name="title_activity_main">Situm Maps Samples</string>
+    <string name="search_placeholder">Search with Wayfinding</string>
 
     <!-- Samples: -->
     <string name="situm_sample_title_simple_map">Simple map</string>
@@ -8,4 +9,6 @@
     <string name="situm_sample_title_delegate_back_events">Delegate back events</string>
     <string name="situm_sample_title_library">Using SitumMapsLibrary</string>
     <string name="situm_sample_title_no_search_view">Remove Search View</string>
+    <string name="situm_sample_title_dashboard_theme">Use theme from dashboard</string>
+    <string name="situm_sample_title_interceptors">Intercept and customize requests.</string>
 </resources>

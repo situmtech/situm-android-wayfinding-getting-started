@@ -25,6 +25,9 @@ With the samples app you will be able to:
 2. [Install listeners using SitumMap](#install-listeners-using-sitummap)
 3. [Load the map using SitumMapsLibrary](#load-the-map-using-sitummapslibrary)
 4. [Delegate onBackPressed events](#delegate-onbackpressed-events)
+5. [Set your own theme in the UI](#set-your-own-theme-in-the-ui)
+6. [Remove the `situm_search_view` feature](#remove-the-situm_search_view-feature)
+7. [Customize location, navigation and directions requests](#customize-location-navigation-and-directions-requests)
 
 #### [More information](#more-information)
 #### [Support information](#support-information)
@@ -98,7 +101,7 @@ android {
 android {
     defaultConfig {
         ...
-        minSdkVersion X
+        minSdkVersion 16
         targetSdkVersion Y
         multiDexEnabled true
     }
@@ -155,6 +158,24 @@ Add the API key to your `AndroidManifest.xml`:
   android:required="false"/>
 ```
 
+* By default, the wayfinding library will include a `ToolBar` with the situm search feature.
+    * Tell your activity or app theme that you already use one by adding these lines to your styles.xml:
+    ```xml
+    <item name="windowActionBar">false</item>
+    <item name="windowNoTitle">true</item>
+    ```
+    * Or remove the Situm search toolbar setting to `false` the `situm_has_search_view` property of your `SitumMapView`:
+    ```xml
+    <es.situm.wayfinding.SitumMapView
+        ...
+        app:situm_has_search_view="false" />
+	```
+
+* Make sure to extend [AppCompatActivity](https://developer.android.com/reference/android/support/v7/app/AppCompatActivity).
+If you chose not to use the `situm_search_view` feature you can just extend [FragmentActivity](https://developer.android.com/reference/android/support/v4/app/FragmentActivity).
+
+* Right now, the `minSdkVersion` must be `16` or greater.
+
 ## Samples
 
 We have created some samples that show different use cases of this module
@@ -162,8 +183,6 @@ We have created some samples that show different use cases of this module
 ### SitumMapView
 
 The simplest way to use our module is by creating an empty activity and including `SitumMapView` in the layout file.
-
-Make sure to extend [FragmentActivity](https://developer.android.com/reference/android/support/v4/app/FragmentActivity) (as it does AppCompatActivity).
 
 For more information, please refer to `ActivitySampleSimpleMap.java`.
 
@@ -174,9 +193,11 @@ If you want to get notified about what happens inside the module, your activity 
 For more information, please refer to `ActivitySampleLogEvents.java`
 
 ### Load the map using SitumMapsLibrary
+
 Under some circumstances you may prefer to control the exact moment at which the underlying maps fragment is loaded. If that is your case, just use the `SitumMapsLibrary` object as described in `ActivitySampleUsingLibrary.java`.
 
 ### Delegate onBackPressed events
+
 The Situm Map implements some convenience actions for `onBackPressed` Android events:
 
 * When there is an active building selected: zoom out to see building markers again.
@@ -185,6 +206,21 @@ The Situm Map implements some convenience actions for `onBackPressed` Android ev
 * When an event is triggered: closes the event dialog.
 
 If you want to keep this behaviour in your application, just delegate each `onBackPressed` as described in `ActivitySampleDelegateBackEvents.java`.
+
+### Set your own theme in the UI
+
+You can use your own logo and color scheme in the module.
+1. Define an organization theme in your Situm Dashboard.
+2. Tell the module to use the organization theme. For that, see `ActivitySampleDashboardTheme.java`.
+
+### Remove the `situm_search_view` feature
+
+If you want to remove the default `situm_search_view` feature, please refer to `ActivitySampleNoSearchView.java`.
+
+### Customize location, navigation and directions requests
+
+The wayfinding module builds default location, navigation and directions requests. You may want to configure those requests before they are dispatched to the underlying SitumSDK.
+If that is your case, please refer to `ActivitySampleCustomizeRequests.java`.
 
 ## More information
 

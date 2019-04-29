@@ -7,11 +7,13 @@ import android.support.v7.widget.RecyclerView;
 import android.support.v7.widget.Toolbar;
 
 import es.situm.wayfinding.sample.R;
+import es.situm.wayfinding.sample.samples.ActivitySampleCustomizeRequests;
+import es.situm.wayfinding.sample.samples.ActivitySampleDashboardTheme;
 import es.situm.wayfinding.sample.samples.ActivitySampleDelegateBackEvents;
-import es.situm.wayfinding.sample.samples.ActivitySampleNoSearchView;
-import es.situm.wayfinding.sample.samples.ActivitySampleUsingLibrary;
 import es.situm.wayfinding.sample.samples.ActivitySampleLogEvents;
+import es.situm.wayfinding.sample.samples.ActivitySampleNoSearchView;
 import es.situm.wayfinding.sample.samples.ActivitySampleSimpleMap;
+import es.situm.wayfinding.sample.samples.ActivitySampleUsingLibrary;
 
 public class MainActivity extends AppCompatActivity implements ViewHolderHelper.OnSampleClickListener {
 
@@ -34,6 +36,8 @@ public class MainActivity extends AppCompatActivity implements ViewHolderHelper.
         mSamplesList.addItem(R.string.situm_sample_title_delegate_back_events, ActivitySampleDelegateBackEvents.class);
         mSamplesList.addItem(R.string.situm_sample_title_library, ActivitySampleUsingLibrary.class);
         mSamplesList.addItem(R.string.situm_sample_title_no_search_view, ActivitySampleNoSearchView.class);
+        mSamplesList.addItem(R.string.situm_sample_title_dashboard_theme, ActivitySampleDashboardTheme.class);
+        mSamplesList.addItem(R.string.situm_sample_title_interceptors, ActivitySampleCustomizeRequests.class);
     }
 
 
