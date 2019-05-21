@@ -57,6 +57,12 @@
         <activity
             android:name=".samples.ActivitySampleCustomizeRequests"
             android:screenOrientation="portrait" />
+        <activity
+            android:name=".samples.ActivitySampleOneBuildingMode"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".samples.ActivitySampleAutostartPositioning"
+            android:screenOrientation="portrait" />
     </application>
 
 </manifest>
