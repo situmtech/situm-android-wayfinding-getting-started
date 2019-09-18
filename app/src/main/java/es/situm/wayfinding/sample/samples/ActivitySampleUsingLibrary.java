@@ -51,7 +51,7 @@ public class ActivitySampleUsingLibrary extends AppCompatActivity implements Sit
         // Get notified about context initialisation events:
         mLibrary.setSitumMapsListener(this);
         // Events:
-        mLibrary.setBuildingChangeListener(this);
+        mLibrary.setOnLoadBuildingsListener(this);
         mLibrary.setOnActiveBuildingListener(this);
         mLibrary.setOnPoiSelectedListener(this);
         mLibrary.setOnFloorSelectedListener(this);
