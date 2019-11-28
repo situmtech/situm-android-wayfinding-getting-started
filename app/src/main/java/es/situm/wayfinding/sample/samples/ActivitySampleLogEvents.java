@@ -39,7 +39,6 @@ public class ActivitySampleLogEvents extends AppCompatActivity implements SitumM
     @Override
     public void onMapReady(SitumMap situmMap) {
         // Events:
-        situmMap.setBuildingChangeListener(this);
         situmMap.setOnActiveBuildingListener(this);
         situmMap.setOnPoiSelectedListener(this);
         situmMap.setOnFloorSelectedListener(this);
