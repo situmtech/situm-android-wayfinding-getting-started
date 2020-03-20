@@ -231,11 +231,11 @@ Sometimes you may want to use your own UI elements over the module, using Situm 
 
 ### Auto start positioning
 
-For some use cases, you may be interested in starting the positioning system automatically instead of using the UI button. If you are interested in this, please refer to the `ActivitySampleAutostartPositioning.java`.
+For some use cases, you may be interested in starting the positioning system automatically instead of using the UI button. To activate this option, you just need to enable a property in your activity's xml file. If you are interested in this, please refer to the `ActivitySampleAutostartPositioning.java`.
 
 ### Single building mode
 
-Situm Wayfinding is designed to work with as many buildings as you want to configure in your dashboard account. However, you may want to restrict that access for your users. If that is your case, you can learn how to restrict the user to just one building using the "Single Building Mode". You can learn how to activate it in the example `ActivitySampleOneBuildingMode.java`.
+Situm Wayfinding is designed to work with as many buildings as you want to configure in your dashboard account. However, you may want to restrict that access for your users. If that is your case, you can learn how to restrict the user to just one building using the "Single Building Mode". You can learn how to activate it checking the xml used in the example `ActivitySampleOneBuildingMode.java`.
 
 ## More information
 
