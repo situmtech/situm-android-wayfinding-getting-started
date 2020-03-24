@@ -10,5 +10,8 @@
     <string name="situm_sample_title_library">Using SitumMapsLibrary</string>
     <string name="situm_sample_title_no_search_view">Remove Search View</string>
     <string name="situm_sample_title_dashboard_theme">Use theme from dashboard</string>
-    <string name="situm_sample_title_interceptors">Intercept and customize requests.</string>
+    <string name="situm_sample_title_interceptors">Intercept and customize requests</string>
+    <string name="situm_sample_title_one_building_mode">One Building Mode</string>
+    <string name="situm_sample_title_autostart_positioning">Start positioning automatically</string>
+    <string name="situm_sample_title_customize_ui">Custom UI elements</string>
 </resources>

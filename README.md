@@ -28,6 +28,9 @@ With the samples app you will be able to:
 5. [Set your own theme in the UI](#set-your-own-theme-in-the-ui)
 6. [Remove the `situm_search_view` feature](#remove-the-situm_search_view-feature)
 7. [Customize location, navigation and directions requests](#customize-location-navigation-and-directions-requests)
+8. [Customize the default UI](#customize-the-default-ui)
+9. [Auto start positioning](#auto-start-positioning)
+10. [Single building mode](#single-building-mode)
 
 #### [More information](#more-information)
 #### [Support information](#support-information)
@@ -221,6 +224,18 @@ If you want to remove the default `situm_search_view` feature, please refer to `
 
 The wayfinding module builds default location, navigation and directions requests. You may want to configure those requests before they are dispatched to the underlying SitumSDK.
 If that is your case, please refer to `ActivitySampleCustomizeRequests.java`.
+
+### Customize the default UI
+
+Sometimes you may want to use your own UI elements over the module, using Situm Wayfinding it is possible to add your own controllers for positioning, for example a floor selector. If you want to know more about how to do this, please visit `ActivitySampleCustomizeUI.java`.
+
+### Auto start positioning
+
+For some use cases, you may be interested in starting the positioning system automatically instead of using the UI button. To activate this option, you just need to enable a property in your activity's xml file. If you are interested in this, please refer to the `ActivitySampleAutostartPositioning.java`.
+
+### Single building mode
+
+Situm Wayfinding is designed to work with as many buildings as you want to configure in your dashboard account. However, you may want to restrict that access for your users. If that is your case, you can learn how to restrict the user to just one building using the "Single Building Mode". You can learn how to activate it checking the xml used in the example `ActivitySampleOneBuildingMode.java`.
 
 ## More information
 
