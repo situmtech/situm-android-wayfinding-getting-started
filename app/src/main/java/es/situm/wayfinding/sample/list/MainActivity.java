@@ -8,6 +8,7 @@ import android.support.v7.widget.Toolbar;
 
 import es.situm.wayfinding.sample.R;
 import es.situm.wayfinding.sample.samples.ActivitySampleAutostartPositioning;
+import es.situm.wayfinding.sample.samples.ActivitySampleChangeGeofencesColor;
 import es.situm.wayfinding.sample.samples.ActivitySampleCustomizeRequests;
 import es.situm.wayfinding.sample.samples.ActivitySampleCustomizeUI;
 import es.situm.wayfinding.sample.samples.ActivitySampleDashboardTheme;
@@ -44,6 +45,7 @@ public class MainActivity extends AppCompatActivity implements ViewHolderHelper.
         mSamplesList.addItem(R.string.situm_sample_title_one_building_mode, ActivitySampleOneBuildingMode.class);
         mSamplesList.addItem(R.string.situm_sample_title_autostart_positioning, ActivitySampleAutostartPositioning.class);
         mSamplesList.addItem(R.string.situm_sample_title_customize_ui, ActivitySampleCustomizeUI.class);
+        mSamplesList.addItem(R.string.situm_sample_title_change_geofences_color, ActivitySampleChangeGeofencesColor.class);
     }
 
 

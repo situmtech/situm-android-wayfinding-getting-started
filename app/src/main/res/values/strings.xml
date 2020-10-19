@@ -14,4 +14,5 @@
     <string name="situm_sample_title_one_building_mode">One Building Mode</string>
     <string name="situm_sample_title_autostart_positioning">Start positioning automatically</string>
     <string name="situm_sample_title_customize_ui">Custom UI elements</string>
+    <string name="situm_sample_title_change_geofences_color">Change geofences color</string>
 </resources>
