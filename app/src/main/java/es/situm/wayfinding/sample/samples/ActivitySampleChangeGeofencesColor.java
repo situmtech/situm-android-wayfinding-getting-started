@@ -31,6 +31,8 @@ public class ActivitySampleChangeGeofencesColor extends AppCompatActivity implem
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_sample_situm_maps);
+        SitumMapView mapView = findViewById(R.id.map_view);
+        mapView.setOnMapReadyCallback(this);
     }
 
     @Override
