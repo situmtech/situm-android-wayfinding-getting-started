@@ -66,6 +66,9 @@
         <activity
             android:name=".samples.ActivitySampleCustomizeUI"
             android:screenOrientation="portrait" />
+        <activity
+            android:name=".samples.ActivitySampleChangeGeofencesColor"
+            android:screenOrientation="portrait" />
     </application>
 
 </manifest>
