@@ -7,8 +7,12 @@
     <es.situm.wayfinding.SitumMapView
         android:id="@+id/map_view"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        app:situm_active_building_id="@string/one_building_mode_building_id"
-        app:situm_enable_one_building_mode="true" />
+        android:layout_height="match_parent" />
+
+<!--    If you want to enable One building mode in the xml uncomment the following lines and
+        put them inside SitumMapView in this same file. In the example it was done programmatically
+        so there is no need to do it in the xml.-->
+<!--    app:situm_active_building_id="@string/one_building_mode_building_id"-->
+<!--    app:situm_enable_one_building_mode="true"-->
 
 </android.support.constraint.ConstraintLayout>
