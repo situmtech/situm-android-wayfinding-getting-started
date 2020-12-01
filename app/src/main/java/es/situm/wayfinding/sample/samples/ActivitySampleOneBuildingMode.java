@@ -20,8 +20,13 @@ public class ActivitySampleOneBuildingMode extends AppCompatActivity implements 
 
     @Override
     public void onMapReady(SitumMap situmMap) {
-        //You must change the building id in the xml or the example won't work
-        situmMap.enableOneBuildingMode(getString(R.string.one_building_mode_building_id));
+        //This will start the positioning in the first building of the account unless you set the building_id in the xml
+        String buildingId = getString(R.string.one_building_mode_building_id);
+        if (buildingId.equals("-1")) {
+            situmMap.enableOneBuildingMode();
+        } else {
+            situmMap.enableOneBuildingMode(buildingId);
+        }
     }
 
     @Override
