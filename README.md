@@ -187,7 +187,7 @@ We have created some samples that show different use cases of this module
 
 The simplest way to use our module is by creating an empty activity and including `SitumMapView` in the layout file.
 
-For more information, please refer to `ActivitySampleSimpleMap.java`.
+For more information, please refer to `activity_sample_situm_maps.xml` and `ActivitySampleSimpleMap.java`.
 
 ### Install listeners using SitumMap
 
@@ -218,7 +218,7 @@ You can use your own logo and color scheme in the module.
 
 ### Remove the `situm_search_view` feature
 
-If you want to remove the default `situm_search_view` feature, please refer to `ActivitySampleNoSearchView.java`.
+If you want to remove the default search bar you can do it by adding `app:situm_has_search_view="false"` in the xml file, please refer to `activity_sample_no_search_view.xml`.
 
 ### Customize location, navigation and directions requests
 
@@ -227,15 +227,15 @@ If that is your case, please refer to `ActivitySampleCustomizeRequests.java`.
 
 ### Customize the default UI
 
-Sometimes you may want to use your own UI elements over the module, using Situm Wayfinding it is possible to add your own controllers for positioning, for example a floor selector. If you want to know more about how to do this, please visit `ActivitySampleCustomizeUI.java`.
+Sometimes you may want to use your own UI elements over the module, using Situm Wayfinding it is possible to add your own controllers for positioning, for example a floor selector. If you want to know more about how to do this, please visit `ActivitySampleCustomizeUI.java` and `activity_sample_customize_ui.xml`.
 
 ### Auto start positioning
 
-For some use cases, you may be interested in starting the positioning system automatically instead of using the UI button. To activate this option, you just need to enable a property in your activity's xml file. If you are interested in this, please refer to the `ActivitySampleAutostartPositioning.java`.
+For some use cases, you may be interested in starting the positioning system automatically instead of using the UI button. To activate this option, you just need to enable `situm_enable_autostart_positioning` in your activity's xml file. If you are interested in this, please refer to the `activity_sample_autostart_mode.xml`.
 
 ### Single building mode
 
-Situm Wayfinding is designed to work with as many buildings as you want to configure in your dashboard account. However, you may want to restrict that access for your users. If that is your case, you can learn how to restrict the user to just one building using the "Single Building Mode". You can learn how to activate it checking the xml used in the example `ActivitySampleOneBuildingMode.java`.
+If you want to only show one building to your user this mode can do it. This can be done programmatically using `SitumMap.enableOneBuildingMode` or in the xml. Refer to `ActivitySampleOneBuildingMode.java` or `activity_sample_one_building_mode.xml` to learn how to do it. You also need to change `one_building_id.xml` with the id of the desired building.
 
 ## More information
 
