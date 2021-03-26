@@ -1,7 +1,7 @@
 package es.situm.wayfinding.sample.samples;
 
 import android.os.Bundle;
-import android.support.v7.app.AppCompatActivity;
+import androidx.appcompat.app.AppCompatActivity;
 
 import es.situm.wayfinding.sample.R;
 
