@@ -40,10 +40,10 @@
             android:name=".samples.ActivitySampleSimpleMap"
             android:screenOrientation="portrait" />
         <activity
-            android:name=".samples.ActivitySampleDelegateBackEvents"
+            android:name=".samples.ActivitySampleDelegateBackEvent"
             android:screenOrientation="portrait" />
         <activity
-            android:name=".samples.ActivitySampleLogEvents"
+            android:name=".samples.ActivitySampleListenEvents"
             android:screenOrientation="portrait" />
         <activity
             android:name=".samples.ActivitySampleUsingLibrary"
@@ -58,10 +58,10 @@
             android:name=".samples.ActivitySampleCustomizeRequests"
             android:screenOrientation="portrait" />
         <activity
-            android:name=".samples.ActivitySampleOneBuildingMode"
+            android:name=".samples.ActivitySampleSingleBuildingMode"
             android:screenOrientation="portrait" />
         <activity
-            android:name=".samples.ActivitySampleAutostartPositioning"
+            android:name=".samples.ActivitySampleAutoStartPositioning"
             android:screenOrientation="portrait" />
         <activity
             android:name=".samples.ActivitySampleCustomizeUI"

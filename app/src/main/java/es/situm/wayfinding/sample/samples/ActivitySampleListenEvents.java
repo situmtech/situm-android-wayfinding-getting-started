@@ -22,11 +22,11 @@ import es.situm.wayfinding.SitumMap;
 import es.situm.wayfinding.SitumMapView;
 import es.situm.wayfinding.sample.R;
 
-public class ActivitySampleLogEvents extends AppCompatActivity implements SitumMapView.OnMapReadyCallback,
+public class ActivitySampleListenEvents extends AppCompatActivity implements SitumMapView.OnMapReadyCallback,
         OnUserInteractionListener, OnActiveBuildingListener, OnLoadBuildingsListener,
         OnFloorChangeListener, OnPoiSelectedListener, OnLocationChangeListener {
 
-    private static final String TAG = ActivitySampleLogEvents.class.getSimpleName();
+    private static final String TAG = ActivitySampleListenEvents.class.getSimpleName();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

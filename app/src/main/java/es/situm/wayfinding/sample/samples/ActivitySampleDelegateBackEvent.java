@@ -13,9 +13,9 @@ import es.situm.wayfinding.sample.R;
  *
  * @author Rodrigo Lago.
  */
-public class ActivitySampleDelegateBackEvents extends AppCompatActivity implements SitumMapView.OnMapReadyCallback {
+public class ActivitySampleDelegateBackEvent extends AppCompatActivity implements SitumMapView.OnMapReadyCallback {
 
-    private static final String TAG = ActivitySampleLogEvents.class.getSimpleName();
+    private static final String TAG = ActivitySampleListenEvents.class.getSimpleName();
     private SitumMap situmMap;
 
     @Override
