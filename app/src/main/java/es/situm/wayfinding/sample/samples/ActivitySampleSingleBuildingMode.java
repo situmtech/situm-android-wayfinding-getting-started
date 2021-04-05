@@ -1,13 +1,13 @@
 package es.situm.wayfinding.sample.samples;
 
 import android.os.Bundle;
-import android.support.v7.app.AppCompatActivity;
+import androidx.appcompat.app.AppCompatActivity;
 
 import es.situm.wayfinding.SitumMap;
 import es.situm.wayfinding.SitumMapView;
 import es.situm.wayfinding.sample.R;
 
-public class ActivitySampleOneBuildingMode extends AppCompatActivity implements SitumMapView.OnMapReadyCallback {
+public class ActivitySampleSingleBuildingMode extends AppCompatActivity implements SitumMapView.OnMapReadyCallback {
 
 
     @Override

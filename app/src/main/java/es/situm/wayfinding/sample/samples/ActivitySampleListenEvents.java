@@ -1,7 +1,7 @@
 package es.situm.wayfinding.sample.samples;
 
 import android.os.Bundle;
-import android.support.v7.app.AppCompatActivity;
+import androidx.appcompat.app.AppCompatActivity;
 import android.util.Log;
 
 import com.google.android.gms.maps.model.LatLng;
@@ -22,11 +22,11 @@ import es.situm.wayfinding.SitumMap;
 import es.situm.wayfinding.SitumMapView;
 import es.situm.wayfinding.sample.R;
 
-public class ActivitySampleLogEvents extends AppCompatActivity implements SitumMapView.OnMapReadyCallback,
+public class ActivitySampleListenEvents extends AppCompatActivity implements SitumMapView.OnMapReadyCallback,
         OnUserInteractionListener, OnActiveBuildingListener, OnLoadBuildingsListener,
         OnFloorChangeListener, OnPoiSelectedListener, OnLocationChangeListener {
 
-    private static final String TAG = ActivitySampleLogEvents.class.getSimpleName();
+    private static final String TAG = ActivitySampleListenEvents.class.getSimpleName();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

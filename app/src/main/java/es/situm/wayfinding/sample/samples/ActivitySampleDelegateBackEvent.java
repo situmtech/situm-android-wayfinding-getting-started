@@ -1,7 +1,7 @@
 package es.situm.wayfinding.sample.samples;
 
 import android.os.Bundle;
-import android.support.v7.app.AppCompatActivity;
+import androidx.appcompat.app.AppCompatActivity;
 import android.util.Log;
 
 import es.situm.wayfinding.SitumMap;
@@ -13,9 +13,9 @@ import es.situm.wayfinding.sample.R;
  *
  * @author Rodrigo Lago.
  */
-public class ActivitySampleDelegateBackEvents extends AppCompatActivity implements SitumMapView.OnMapReadyCallback {
+public class ActivitySampleDelegateBackEvent extends AppCompatActivity implements SitumMapView.OnMapReadyCallback {
 
-    private static final String TAG = ActivitySampleLogEvents.class.getSimpleName();
+    private static final String TAG = ActivitySampleListenEvents.class.getSimpleName();
     private SitumMap situmMap;
 
     @Override

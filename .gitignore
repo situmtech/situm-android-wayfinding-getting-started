@@ -9,6 +9,7 @@
 /captures
 .externalNativeBuild
 .idea/
-local.gradle
-/app/src/debug
 /situm-wayfindingsitum-*/
+local.gradle
+.dangerous-files
+/app/src/debug

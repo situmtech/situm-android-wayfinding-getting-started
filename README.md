@@ -21,16 +21,17 @@ With the samples app you will be able to:
 
 #### [Samples](#samples)
 
-1. [SitumMapView](#sitummapview)
-2. [Install listeners using SitumMap](#install-listeners-using-sitummap)
-3. [Load the map using SitumMapsLibrary](#load-the-map-using-sitummapslibrary)
-4. [Delegate onBackPressed events](#delegate-onbackpressed-events)
-5. [Set your own theme in the UI](#set-your-own-theme-in-the-ui)
-6. [Remove the `situm_search_view` feature](#remove-the-situm_search_view-feature)
-7. [Customize location, navigation and directions requests](#customize-location-navigation-and-directions-requests)
-8. [Customize the default UI](#customize-the-default-ui)
-9. [Auto start positioning](#auto-start-positioning)
+1. [Simple map](#simple-map)
+2. [Listen events](#listen-events)
+3. [Using SitumMapsLibrary](#using-sitummapslibrary)
+4. [Delegate onBackPressed event](#delegate-onbackpressed-event)
+5. [Remove search view](#remove-search-view)
+6. [Use theme from Dashboard](#use-theme-from-dashboard)
+7. [Intercept and customize requests (location, navigation and directions)](#intercept-and-customize-requests-location-navigation-and-directions)
+8. [Custom UI elements](#custom-ui-elements)
+9. [Start positioning automatically](#start-positioning-automatically)
 10. [Single building mode](#single-building-mode)
+11. [Change geofences color](#change-geofences-color)
 
 #### [More information](#more-information)
 #### [Support information](#support-information)
@@ -81,7 +82,7 @@ allprojects {
 * Now add the Situm Wayfinding Module dependency into the *dependencies* section of the **app** *build.gradle*.
 
 ```groovy
-    implementation ('es.situm:situm-wayfinding:0.2.0-alpha@aar') {
+    implementation('es.situm:situm-wayfinding:0.8.1-alpha@aar') {
         transitive = true
     }
 ```
@@ -112,10 +113,10 @@ android {
 }
 ```
 
-Please remember that if your `minSdkVersion` is set to 20 or lower, you must use the multidex support library as follows:
+Please remember that if your `minSdkVersion` is set to 20 or lower, you must use the multidex library as follows:
 ```groovy
 dependencies {
-  implementation 'com.android.support:multidex:1.0.3'
+  implementation 'androidx.multidex:multidex:2.0.1'
 }
 ```
 
@@ -174,7 +175,7 @@ Add the API key to your `AndroidManifest.xml`:
         app:situm_has_search_view="false" />
 	```
 
-* Make sure to extend [AppCompatActivity](https://developer.android.com/reference/android/support/v7/app/AppCompatActivity).
+* Make sure to extend [AppCompatActivity](https://developer.android.com/reference/androidx/appcompat/app/AppCompatActivity).
 If you chose not to use the `situm_search_view` feature you can just extend [FragmentActivity](https://developer.android.com/reference/android/support/v4/app/FragmentActivity).
 
 * Right now, the `minSdkVersion` must be `16` or greater.
@@ -183,23 +184,23 @@ If you chose not to use the `situm_search_view` feature you can just extend [Fra
 
 We have created some samples that show different use cases of this module
 
-### SitumMapView
+### Simple map
 
 The simplest way to use our module is by creating an empty activity and including `SitumMapView` in the layout file.
 
 For more information, please refer to `activity_sample_situm_maps.xml` and `ActivitySampleSimpleMap.java`.
 
-### Install listeners using SitumMap
+### Listen events
 
 If you want to get notified about what happens inside the module, your activity should implement the `SitumMapView.OnMapReadyCallback` interface:
 
 For more information, please refer to `ActivitySampleLogEvents.java`
 
-### Load the map using SitumMapsLibrary
+### Using SitumMapsLibrary
 
 Under some circumstances you may prefer to control the exact moment at which the underlying maps fragment is loaded. If that is your case, just use the `SitumMapsLibrary` object as described in `ActivitySampleUsingLibrary.java`.
 
-### Delegate onBackPressed events
+### Delegate onBackPressed event
 
 The Situm Map implements some convenience actions for `onBackPressed` Android events:
 
@@ -210,32 +211,36 @@ The Situm Map implements some convenience actions for `onBackPressed` Android ev
 
 If you want to keep this behaviour in your application, just delegate each `onBackPressed` as described in `ActivitySampleDelegateBackEvents.java`.
 
-### Set your own theme in the UI
+### Remove search view
+
+If you want to remove the default search bar you can do it by adding `app:situm_has_search_view="false"` in the xml file, please refer to `activity_sample_no_search_view.xml`.
+
+### Use theme from Dashboard
 
 You can use your own logo and color scheme in the module.
 1. Define an organization theme in your Situm Dashboard.
 2. Tell the module to use the organization theme. For that, see `ActivitySampleDashboardTheme.java`.
 
-### Remove the `situm_search_view` feature
-
-If you want to remove the default search bar you can do it by adding `app:situm_has_search_view="false"` in the xml file, please refer to `activity_sample_no_search_view.xml`.
-
-### Customize location, navigation and directions requests
+### Intercept and customize requests (location, navigation and directions)
 
 The wayfinding module builds default location, navigation and directions requests. You may want to configure those requests before they are dispatched to the underlying SitumSDK.
 If that is your case, please refer to `ActivitySampleCustomizeRequests.java`.
 
-### Customize the default UI
+### Custom UI elements
 
 Sometimes you may want to use your own UI elements over the module, using Situm Wayfinding it is possible to add your own controllers for positioning, for example a floor selector. If you want to know more about how to do this, please visit `ActivitySampleCustomizeUI.java` and `activity_sample_customize_ui.xml`.
 
-### Auto start positioning
+### Start positioning automatically
 
 For some use cases, you may be interested in starting the positioning system automatically instead of using the UI button. To activate this option, you just need to enable `situm_enable_autostart_positioning` in your activity's xml file. If you are interested in this, please refer to the `activity_sample_autostart_mode.xml`.
 
 ### Single building mode
 
 If you want to only show one building to your user this mode can do it. This can be done programmatically using `SitumMap.enableOneBuildingMode` or in the xml. Refer to `ActivitySampleOneBuildingMode.java` or `activity_sample_one_building_mode.xml` to learn how to do it. You also need to change `one_building_id.xml` with the id of the desired building.
+
+### Change geofences color
+
+As well as using your organization theme and use custom UI elements, you can choose the color used to render geofences over the map. 
 
 ## More information
 
