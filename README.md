@@ -194,7 +194,7 @@ For more information, please refer to `activity_sample_situm_maps.xml` and `Acti
 
 If you want to get notified about what happens inside the module, your activity should implement the `SitumMapView.OnMapReadyCallback` interface:
 
-For more information, please refer to `ActivitySampleLogEvents.java`
+For more information, please refer to `ActivitySampleListenEvents.java`
 
 ### Using SitumMapsLibrary
 
@@ -209,7 +209,7 @@ The Situm Map implements some convenience actions for `onBackPressed` Android ev
 * When a route has been requested: cancels the current route.
 * When an event is triggered: closes the event dialog.
 
-If you want to keep this behaviour in your application, just delegate each `onBackPressed` as described in `ActivitySampleDelegateBackEvents.java`.
+If you want to keep this behaviour in your application, just delegate each `onBackPressed` as described in `ActivitySampleDelegateBackEvent.java`.
 
 ### Remove search view
 
