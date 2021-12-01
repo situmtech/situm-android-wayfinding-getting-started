@@ -12,6 +12,7 @@
     <string name="situm_sample_title_dashboard_theme">Use theme from Dashboard</string>
     <string name="situm_sample_title_interceptors">Intercept and customize requests</string>
     <string name="situm_sample_title_customize_ui">Custom UI elements</string>
+    <string name="situm_sample_title_custom_position_icons">Custom position icons</string>
     <string name="situm_sample_title_auto_start_positioning">Start positioning automatically</string>
     <string name="situm_sample_title_one_building_mode">Single building mode</string>
     <string name="situm_sample_title_change_geofences_color">Change geofences color</string>
