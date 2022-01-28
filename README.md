@@ -113,13 +113,6 @@ android {
 }
 ```
 
-Please remember that if your `minSdkVersion` is set to 20 or lower, you must use the multidex library as follows:
-```groovy
-dependencies {
-  implementation 'androidx.multidex:multidex:2.0.1'
-}
-```
-
 #### Step 2: Set your credentials
 
 There are two ways to set the credentials, in the `AndroidManifest.xml` file or programmatically.
