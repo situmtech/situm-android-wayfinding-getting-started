@@ -100,19 +100,6 @@ android {
 }
 ```
 
-* Finally, add multidex compatibility to your **app** *build.gradle*:
-```groovy
-android {
-    defaultConfig {
-        ...
-        minSdkVersion 21
-        targetSdkVersion Y
-        multiDexEnabled true
-    }
-    ...
-}
-```
-
 #### Step 2: Set your credentials
 
 There are two ways to set the credentials, in the `AndroidManifest.xml` file or programmatically.
