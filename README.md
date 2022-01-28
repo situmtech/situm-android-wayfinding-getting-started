@@ -82,7 +82,7 @@ allprojects {
 * Now add the Situm Wayfinding Module dependency into the *dependencies* section of the **app** *build.gradle*.
 
 ```groovy
-    implementation('es.situm:situm-wayfinding:0.8.5-alpha@aar') {
+    implementation('es.situm:situm-wayfinding:0.9.2-alpha@aar') {
         transitive = true
     }
 ```
@@ -105,7 +105,7 @@ android {
 android {
     defaultConfig {
         ...
-        minSdkVersion 16
+        minSdkVersion 21
         targetSdkVersion Y
         multiDexEnabled true
     }
@@ -178,7 +178,7 @@ Add the API key to your `AndroidManifest.xml`:
 * Make sure to extend [AppCompatActivity](https://developer.android.com/reference/androidx/appcompat/app/AppCompatActivity).
 If you chose not to use the `situm_search_view` feature you can just extend [FragmentActivity](https://developer.android.com/reference/android/support/v4/app/FragmentActivity).
 
-* Right now, the `minSdkVersion` must be `16` or greater.
+* Right now, the `minSdkVersion` must be `21` or greater.
 
 ## Samples
 
