@@ -17,7 +17,7 @@ import es.situm.wayfinding.OnActiveBuildingListener;
 import es.situm.wayfinding.OnFloorChangeListener;
 import es.situm.wayfinding.OnLoadBuildingsListener;
 import es.situm.wayfinding.OnLocationChangeListener;
-import es.situm.wayfinding.OnPoiSelectedListener;
+import es.situm.wayfinding.OnPoiSelectionListener;
 import es.situm.wayfinding.OnUserInteractionListener;
 import es.situm.wayfinding.SitumMapsLibrary;
 import es.situm.wayfinding.SitumMapsListener;
@@ -25,7 +25,7 @@ import es.situm.wayfinding.sample.R;
 
 public class ActivitySampleUsingLibrary extends AppCompatActivity implements SitumMapsListener,
         OnUserInteractionListener, OnActiveBuildingListener, OnLoadBuildingsListener,
-        OnFloorChangeListener, OnPoiSelectedListener, OnLocationChangeListener {
+        OnFloorChangeListener, OnPoiSelectionListener, OnLocationChangeListener {
 
     private static final String TAG = ActivitySampleUsingLibrary.class.getSimpleName();
 
@@ -53,8 +53,8 @@ public class ActivitySampleUsingLibrary extends AppCompatActivity implements Sit
         // Events:
         mLibrary.setOnLoadBuildingsListener(this);
         mLibrary.setOnActiveBuildingListener(this);
-        mLibrary.setOnPoiSelectedListener(this);
-        mLibrary.setOnFloorSelectedListener(this);
+        mLibrary.setOnPoiSelectionListener(this);
+        mLibrary.setOnFloorChangeListener(this);
         mLibrary.setUserInteractionsListener(this);
         // Stay alert of location changes:
         mLibrary.setOnLocationChangeListener(this);
@@ -123,7 +123,7 @@ public class ActivitySampleUsingLibrary extends AppCompatActivity implements Sit
     // =============================================================================================
 
     @Override
-    public void onPOISelected(Poi poi, Floor level, Building building) {
+    public void onPoiSelected(Poi poi, Floor level, Building building) {
         Log.d(TAG, "OnPoiSelectedListener#onPOISelected");
     }
 

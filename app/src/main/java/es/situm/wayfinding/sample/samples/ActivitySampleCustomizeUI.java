@@ -21,7 +21,7 @@ import es.situm.sdk.model.cartography.Poi;
 import es.situm.sdk.utils.Handler;
 import es.situm.wayfinding.OnActiveBuildingListener;
 import es.situm.wayfinding.OnLibraryViewListener;
-import es.situm.wayfinding.OnPoiSelectedListener;
+import es.situm.wayfinding.OnPoiSelectionListener;
 import es.situm.wayfinding.SitumMap;
 import es.situm.wayfinding.SitumMapView;
 import es.situm.wayfinding.sample.R;
@@ -29,7 +29,7 @@ import es.situm.wayfinding.sample.R;
 public class ActivitySampleCustomizeUI extends AppCompatActivity implements
         SitumMapView.OnMapReadyCallback,
         OnActiveBuildingListener,
-        OnPoiSelectedListener, SeekBar.OnSeekBarChangeListener, OnLibraryViewListener {
+        OnPoiSelectionListener, SeekBar.OnSeekBarChangeListener, OnLibraryViewListener {
 
     private static final String TAG = ActivitySampleCustomizeUI.class.getSimpleName();
     private SitumMap mSitumMap;
@@ -48,7 +48,7 @@ public class ActivitySampleCustomizeUI extends AppCompatActivity implements
     public void onMapReady(SitumMap situmMap) {
         mSitumMap = situmMap;
         mSitumMap.setOnActiveBuildingListener(this);
-        mSitumMap.setOnPoiSelectedListener(this);
+        mSitumMap.setOnPoiSelectionListener(this);
         // Set this class to receive a call on root view created:
         mSitumMap.setOnLibraryViewListener(this);
     }
@@ -126,7 +126,7 @@ public class ActivitySampleCustomizeUI extends AppCompatActivity implements
     // Show PoI info:
     // =============================================================================================
     @Override
-    public void onPOISelected(Poi poi, Floor floor, Building building) {
+    public void onPoiSelected(Poi poi, Floor floor, Building building) {
         String text = String.format("%s at %s selected!", poi.getName(), building.getName());
         Toast.makeText(this, text, Toast.LENGTH_SHORT).show();
     }
