@@ -119,17 +119,17 @@ public class ActivitySampleUsingLibrary extends AppCompatActivity implements Sit
     }
 
     // =============================================================================================
-    // OnPoiSelectedListener
+    // OnPoiSelectionListener
     // =============================================================================================
 
     @Override
     public void onPoiSelected(Poi poi, Floor level, Building building) {
-        Log.d(TAG, "OnPoiSelectedListener#onPOISelected");
+        Log.d(TAG, "OnPoiSelectionListener#onPoiSelected");
     }
 
     @Override
     public void onPoiDeselected(Building building) {
-        Log.d(TAG, "OnPoiSelectedListener#onPoiDeselected");
+        Log.d(TAG, "OnPoiSelectionListener#onPoiDeselected");
     }
 
     // =============================================================================================
