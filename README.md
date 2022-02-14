@@ -82,7 +82,7 @@ allprojects {
 * Now add the Situm Wayfinding Module dependency into the *dependencies* section of the **app** *build.gradle*.
 
 ```groovy
-    implementation('es.situm:situm-wayfinding:0.9.2-alpha@aar') {
+    implementation('es.situm:situm-wayfinding:0.10.0-alpha@aar') {
         transitive = true
     }
 ```
