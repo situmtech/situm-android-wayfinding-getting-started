@@ -20,11 +20,14 @@ import es.situm.wayfinding.OnPoiSelectedListener;
 import es.situm.wayfinding.OnUserInteractionListener;
 import es.situm.wayfinding.SitumMap;
 import es.situm.wayfinding.SitumMapView;
+import es.situm.wayfinding.navigation.Navigation;
+import es.situm.wayfinding.navigation.NavigationError;
+import es.situm.wayfinding.navigation.OnNavigationListener;
 import es.situm.wayfinding.sample.R;
 
 public class ActivitySampleListenEvents extends AppCompatActivity implements SitumMapView.OnMapReadyCallback,
         OnUserInteractionListener, OnActiveBuildingListener, OnLoadBuildingsListener,
-        OnFloorChangeListener, OnPoiSelectedListener, OnLocationChangeListener {
+        OnFloorChangeListener, OnPoiSelectedListener, OnLocationChangeListener, OnNavigationListener {
 
     private static final String TAG = ActivitySampleListenEvents.class.getSimpleName();
 
@@ -44,6 +47,7 @@ public class ActivitySampleListenEvents extends AppCompatActivity implements Sit
         situmMap.setOnPoiSelectedListener(this);
         situmMap.setOnFloorSelectedListener(this);
         situmMap.setUserInteractionsListener(this);
+        situmMap.setOnNavigationListener(this);
         // Stay alert of location changes:
         situmMap.setOnLocationChangeListener(this);
     }
@@ -110,23 +114,27 @@ public class ActivitySampleListenEvents extends AppCompatActivity implements Sit
     }
 
     // =============================================================================================
-    // OnUserInteractionListener
+    // OnNavigationListener
     // =============================================================================================
 
     @Override
-    public void onRouteToSelectedPOIRequested() {
-        Log.d(TAG, "OnUserInteractionListener#onRouteToSelectedPOIRequested");
+    public void onNavigationRequested(Navigation navigation) {
+        Log.d(TAG, "OnNavigationListener#onNavigationRequested");
     }
 
     @Override
-    public void onRouteFinish() {
-        Log.d(TAG, "OnUserInteractionListener#onRouteFinish");
+    public void onNavigationError(Navigation navigation, NavigationError navigationError) {
+        Log.d(TAG, "OnNavigationListener#onNavigationError");
     }
 
     @Override
-    public void onRouteCanceled() {
-        Log.d(TAG, "OnUserInteractionListener#onRouteCanceled");
+    public void onNavigationFinished(Navigation navigation) {
+        Log.d(TAG, "OnNavigationListener#onNavigationFinished");
     }
+
+    // =============================================================================================
+    // OnUserInteractionListener
+    // =============================================================================================
 
     @Override
     public void onMapReady() {
