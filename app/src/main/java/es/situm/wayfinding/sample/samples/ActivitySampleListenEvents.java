@@ -27,7 +27,7 @@ import es.situm.wayfinding.sample.R;
 
 public class ActivitySampleListenEvents extends AppCompatActivity implements SitumMapView.OnMapReadyCallback,
         OnUserInteractionListener, OnActiveBuildingListener, OnLoadBuildingsListener,
-        OnFloorChangeListener, OnPoiSelectionListener, OnLocationChangeListener {
+        OnFloorChangeListener, OnPoiSelectionListener, OnLocationChangeListener, OnNavigationListener {
 
     private static final String TAG = ActivitySampleListenEvents.class.getSimpleName();
 
