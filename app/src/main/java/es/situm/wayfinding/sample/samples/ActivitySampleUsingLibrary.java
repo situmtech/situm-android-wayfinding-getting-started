@@ -17,7 +17,7 @@ import es.situm.wayfinding.OnActiveBuildingListener;
 import es.situm.wayfinding.OnFloorChangeListener;
 import es.situm.wayfinding.OnLoadBuildingsListener;
 import es.situm.wayfinding.OnLocationChangeListener;
-import es.situm.wayfinding.OnPoiSelectedListener;
+import es.situm.wayfinding.OnPoiSelectionListener;
 import es.situm.wayfinding.OnUserInteractionListener;
 import es.situm.wayfinding.SitumMapsLibrary;
 import es.situm.wayfinding.SitumMapsListener;
@@ -28,7 +28,7 @@ import es.situm.wayfinding.sample.R;
 
 public class ActivitySampleUsingLibrary extends AppCompatActivity implements SitumMapsListener,
         OnUserInteractionListener, OnActiveBuildingListener, OnLoadBuildingsListener,
-        OnFloorChangeListener, OnPoiSelectedListener, OnLocationChangeListener, OnNavigationListener {
+        OnFloorChangeListener, OnPoiSelectionListener, OnLocationChangeListener, OnNavigationListener {
 
     private static final String TAG = ActivitySampleUsingLibrary.class.getSimpleName();
 
@@ -56,8 +56,8 @@ public class ActivitySampleUsingLibrary extends AppCompatActivity implements Sit
         // Events:
         mLibrary.setOnLoadBuildingsListener(this);
         mLibrary.setOnActiveBuildingListener(this);
-        mLibrary.setOnPoiSelectedListener(this);
-        mLibrary.setOnFloorSelectedListener(this);
+        mLibrary.setOnPoiSelectionListener(this);
+        mLibrary.setOnFloorChangeListener(this);
         mLibrary.setUserInteractionsListener(this);
         mLibrary.setOnNavigationListener(this);
         // Stay alert of location changes:
@@ -123,17 +123,17 @@ public class ActivitySampleUsingLibrary extends AppCompatActivity implements Sit
     }
 
     // =============================================================================================
-    // OnPoiSelectedListener
+    // OnPoiSelectionListener
     // =============================================================================================
 
     @Override
-    public void onPOISelected(Poi poi, Floor level, Building building) {
-        Log.d(TAG, "OnPoiSelectedListener#onPOISelected");
+    public void onPoiSelected(Poi poi, Floor level, Building building) {
+        Log.d(TAG, "OnPoiSelectionListener#onPoiSelected");
     }
 
     @Override
     public void onPoiDeselected(Building building) {
-        Log.d(TAG, "OnPoiSelectedListener#onPoiDeselected");
+        Log.d(TAG, "OnPoiSelectionListener#onPoiDeselected");
     }
 
     // =============================================================================================
