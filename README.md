@@ -11,6 +11,10 @@ With the samples app you will be able to:
   3. Get more control of the map loading using the underlying `SitumMapsLibrary` object.
   4. Delegate `onBackPressed()` events for convenience.
 
+## Submitting Contributions
+
+You will need to sign a Contributor License Agreement (CLA) before making a submission. 
+[Learn more here.](https://situm.com/contributions/)
 
 # Table of contents
 #### [Introduction](#introduction)
