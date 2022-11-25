@@ -49,6 +49,7 @@ public class ActivitySampleUsingLibrary extends AppCompatActivity implements Sit
         String apiKey = getString(R.string.situm_credentials_api_key);
         librarySettings = new LibrarySettings();
         librarySettings.setApiKey(user, apiKey);
+        librarySettings.setEnablePoiClustering(true);
         // Create library:
         mLibrary = new SitumMapsLibrary(R.id.maps_library_target, this, librarySettings);
         // Get notified about context initialisation events:
@@ -143,6 +144,11 @@ public class ActivitySampleUsingLibrary extends AppCompatActivity implements Sit
     @Override
     public void onNavigationRequested(Navigation navigation) {
         Log.d(TAG, "OnNavigationListener#onNavigationRequested");
+    }
+
+    @Override
+    public void onNavigationStarted(Navigation navigation) {
+        Log.d(TAG, "OnNavigationListener#onNavigationStarted");
     }
 
     @Override

@@ -36,6 +36,7 @@ You will need to sign a Contributor License Agreement (CLA) before making a subm
 9. [Start positioning automatically](#start-positioning-automatically)
 10. [Single building mode](#single-building-mode)
 11. [Change geofences color](#change-geofences-color)
+12. [Custom position icons](#custom-position-icons)
 
 #### [More information](#more-information)
 #### [Support information](#support-information)
@@ -86,7 +87,7 @@ allprojects {
 * Now add the Situm Wayfinding Module dependency into the *dependencies* section of the **app** *build.gradle*.
 
 ```groovy
-    implementation('es.situm:situm-wayfinding:0.15.0-alpha@aar') {
+    implementation('es.situm:situm-wayfinding:0.21.0-alpha@aar') {
         transitive = true
     }
 ```
@@ -224,7 +225,16 @@ If you want to only show one building to your user this mode can do it. This can
 
 ### Change geofences color
 
-As well as using your organization theme and use custom UI elements, you can choose the color used to render geofences over the map. 
+As well as using your organization theme and use custom UI elements, you can choose the color used to render geofences over the map.
+
+### Custom position icons
+
+Customize the icons used to show the user position over the map. Two icons can be provided:
+
+* `librarySettings.setUserPositionIcon(userPositionIcon)`: position without orientation.
+* `librarySettings.setUserPositionArrowIcon(userPositionArrowIcon)`: position with orientation.
+
+The example `ActivitySampleCustomPositionIcons.java` uses xml attributes, as you can see in the layout file `activity_sample_custom_position_icons.xml`.
 
 ## More information
 

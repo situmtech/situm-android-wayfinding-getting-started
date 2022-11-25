@@ -123,6 +123,11 @@ public class ActivitySampleListenEvents extends AppCompatActivity implements Sit
     }
 
     @Override
+    public void onNavigationStarted(Navigation navigation) {
+        Log.d(TAG, "OnNavigationListener#onNavigationStarted");
+    }
+
+    @Override
     public void onNavigationError(Navigation navigation, NavigationError navigationError) {
         Log.d(TAG, "OnNavigationListener#onNavigationError");
     }
