@@ -2,7 +2,7 @@ Situm Wayfinding Getting Started
 =======================
 
 > [!IMPORTANT]  
-> This guide refers to the old version of the Wayfinding module, which is **no longer maintained**. We strongly recommend adopting [MapView](https://situm.com/docs/a-basic-android-app/), the new visual component available at the [Situm Android SDK](https://situm.com/en/desarrollo-mobile-sdk/).
+> This guide refers to the old version of the Wayfinding module, which is **no longer maintained**. We strongly recommend adopting [MapView](https://situm.com/docs/a-basic-android-app/), the new visual component available at the [Situm Android SDK](https://situm.com/docs/a-basic-android-app/).
 To stay up to date, checkout the [Android SDK Changelog](https://situm.com/docs/android-sdk-changelog/) and visit the [migration guide](https://situm.com/docs/android-wyf-migration-guide/) to ease the transition to the new library.
 
 This is a sample Android application built with Situm Wayfinding Module.
